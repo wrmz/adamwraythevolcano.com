@@ -38,3 +38,15 @@ a {
   text-decoration: none;
   color: var(--color);
 }
+.link {
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-auto-columns: max-content;
+  align-items: center;
+  gap: 10px;
+  transition: color .2s ease-out;
+}
+.link:hover,
+.link:focus {
+  color: var(--palette-red);
+}
