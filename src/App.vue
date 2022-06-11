@@ -95,13 +95,16 @@ import { RouterLink, RouterView } from "vue-router";
   }
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
     padding: 40px 30px;
   }
   @media (min-width: 1024px) {
+    gap: 50px;
     padding: 50px 50px;
   }
   @media (min-width: 1320px) {
-     padding: 70px calc((100vw - 1280px) / 2);
+    gap: 70px;
+    padding: 70px calc((100vw - 1280px) / 2);
   }
 }
 .section__header {
