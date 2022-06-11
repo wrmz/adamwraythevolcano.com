@@ -29,16 +29,24 @@ import HelloWorld from "@/components/HelloWorld.vue";
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
   font-weight: normal;
   color: white;
 }
 .header {
+  position: sticky;
   display: grid;
   gap: 10px;
+  top: 0;
+  height: 130px;
+  background: var(--background);
+  z-index: 1;
 }
 .header__logo {
   font-size: 2rem;
+}
+.header__top {
+  padding: 20px 0;
 }
 .header__nav {
   display: grid;
