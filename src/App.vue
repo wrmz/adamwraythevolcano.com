@@ -28,6 +28,20 @@ import HelloWorld from "@/components/HelloWorld.vue";
   font-weight: normal;
   color: white;
 }
+.header {
+  display: grid;
+  gap: 10px;
+}
+.header__logo {
+  font-size: 2rem;
+}
+.header__nav {
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-auto-columns: max-content;
+  justify-content: flex-end;
+  gap: 20px;
+}
 
 /* #app {
   max-width: 1280px;
