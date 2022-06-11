@@ -1,6 +1,8 @@
+<script setup>
+    import TheCallout from '@/components/TheCallout.vue';
+</script>
 <template>
     <section id="book" class="section" role="region" tabindex="0">
-
         <article class="section__column">
             <header class="section__header">
                 <h2 class="section__title">The Volcano</h2>
@@ -13,7 +15,9 @@
                 <p>This autobiography takes a twist, as the author invites us on a journey that forms his life&rsquo;s volcano, through his own eyes, in real time. Is the introduction of a special and rare love the final puzzle piece in this man&rsquo;s pathway to God or will a &ldquo;volcanic eruption&rdquo; render him derailed?</p>
             </div>
             <footer class="section__footer">
-                <TheSocials />
+                <TheCallout>
+                    Available for Preorder in September
+                </TheCallout>
             </footer>
         </article>
         <aside class="section__column">
