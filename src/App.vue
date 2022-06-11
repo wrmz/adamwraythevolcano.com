@@ -69,8 +69,14 @@ import HelloWorld from "@/components/HelloWorld.vue";
   }
 }
 .section {
+  display: grid;
+  gap: 20px;
   padding: 40px 20px;
+  &:nth-child(odd) {
+    background: rgba(white, 0.1);
+  }
   @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 40px 30px;
   }
   @media (min-width: 1024px) {
