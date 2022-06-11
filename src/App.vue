@@ -1,12 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
 <template>
   <header class="header">
     <h1 class="header__top">
-      <RouterLink to="/" class="header__logo">AdamWrayTheVolcano</RouterLink>
+      <RouterLink to="/" class="header__logo">AdamWrayTheVolcano.com</RouterLink>
     </h1>
     <nav class="header__nav">
       <RouterLink to="#bio" class="header__link">Bio</RouterLink>
@@ -28,11 +27,9 @@ import HelloWorld from "@/components/HelloWorld.vue";
 .header {
   position: sticky;
   display: grid;
-  gap: 10px;
   top: 0;
-  height: 130px;
   padding: 0 20px;
-  background: var(--background);
+  background: var(--palette-dark-gray);
   z-index: 1;
   @media (min-width: 768px) {
     padding: 0 30px;
@@ -54,15 +51,26 @@ import HelloWorld from "@/components/HelloWorld.vue";
   display: grid;
   grid-auto-flow: column dense;
   grid-auto-columns: max-content;
-  justify-content: flex-end;
-  gap: 20px;
+  @media (min-width: 1024px) {
+    justify-content: flex-end;
+    gap: 20px;
+  }
 }
 .header__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 8px 30px 10px 20px;
+  line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   transition: color .2s ease-out;
+  background: var(--palette-black);
+  clip-path: polygon(0 0, calc(100% - 20px) 0%, 100% 100%, 0 100%);
   &:hover, &:focus {
     color: var(--palette-red);
+    background: var(--palette-black);
   }
   @media (min-width: 1024px) {
     font-size: 18px;
@@ -72,8 +80,18 @@ import HelloWorld from "@/components/HelloWorld.vue";
   display: grid;
   gap: 20px;
   padding: 40px 20px;
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background: rgba(white, 0.1);
+  }
+  p {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  img {
+    display: block;
+    max-width: 100%;
   }
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -84,6 +102,28 @@ import HelloWorld from "@/components/HelloWorld.vue";
   }
   @media (min-width: 1320px) {
      padding: 70px calc((100vw - 1280px) / 2);
+  }
+}
+.section__header {
+  margin-bottom: 30px;
+}
+.section__title {
+  font-size: 30px;
+  line-height: 1.3;
+  @media (min-width: 1024px) {
+    font-size: 40px;
+  }
+}
+.section__subtitle {
+  font-size: 24px;
+  line-height: 1.3;
+  @media (min-width: 1024px) {
+    font-size: 30px;
+  }
+}
+.section__body {
+  @media (min-width: 1024px) {
+    font-size: 18px;
   }
 }
 

@@ -2,6 +2,8 @@
 :root {
   --color: white;
   --background: #011012;
+  --palette-black: #011012;
+  --palette-dark-gray: #1F3133;
   --palette-red: red;
 }
 
