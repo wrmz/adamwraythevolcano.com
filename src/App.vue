@@ -6,16 +6,21 @@ import HelloWorld from "@/components/HelloWorld.vue";
 <template>
   <header class="header">
     <div class="header__top">
-      <a href="/" class="header__logo">AdamWrayTheVolcano</a>
+      <RouterLink to="/" class="header__logo">AdamWrayTheVolcano</RouterLink>
     </div>
     <nav class="header__nav">
-      <RouterLink to="/">Bio</RouterLink>
-      <RouterLink to="/">Book</RouterLink>
-      <RouterLink to="/">Album</RouterLink>
-      <RouterLink to="/">Pub</RouterLink>
+      <RouterLink :to="{ hash: '#bio' }">Bio</RouterLink>
+      <RouterLink to="#book">Book</RouterLink>
+      <RouterLink to="#album">Album</RouterLink>
+      <RouterLink to="#pub">Pub</RouterLink>
     </nav>
   </header>
   <RouterView />
+  <!-- <RouterView v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" :key="$route.path"></component>
+    </transition>
+  </RouterView> -->
 </template>
 
 <style>

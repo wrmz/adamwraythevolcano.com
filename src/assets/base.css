@@ -13,6 +13,9 @@
   position: relative;
   font-weight: normal;
 }
+html, body {
+  scroll-behavior: smooth;
+}
 
 body {
   min-height: 100vh;
@@ -30,4 +33,8 @@ body {
 a {
   text-decoration: none;
   color: var(--color);
+}
+
+.section {
+  padding: 340px 0;
 }
