@@ -126,6 +126,9 @@ import { RouterLink, RouterView } from "vue-router";
     font-size: 18px;
   }
 }
+.section__footer {
+  margin-top: 30px;
+}
 
 /* #app {
   max-width: 1280px;
