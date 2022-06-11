@@ -2,6 +2,7 @@
 :root {
   --color: white;
   --background: #011012;
+  --palette-red: red;
 }
 
 
@@ -33,8 +34,4 @@ body {
 a {
   text-decoration: none;
   color: var(--color);
-}
-
-.section {
-  padding: 340px 0;
 }

@@ -5,31 +5,23 @@ import HelloWorld from "@/components/HelloWorld.vue";
 
 <template>
   <header class="header">
-    <div class="header__top">
+    <h1 class="header__top">
       <RouterLink to="/" class="header__logo">AdamWrayTheVolcano</RouterLink>
-    </div>
+    </h1>
     <nav class="header__nav">
-      <RouterLink :to="{ hash: '#bio' }">Bio</RouterLink>
-      <RouterLink to="#book">Book</RouterLink>
-      <RouterLink to="#album">Album</RouterLink>
-      <RouterLink to="#pub">Pub</RouterLink>
+      <RouterLink to="#bio" class="header__link">Bio</RouterLink>
+      <RouterLink to="#book" class="header__link">Book</RouterLink>
+      <RouterLink to="#album" class="header__link">Album</RouterLink>
+      <RouterLink to="#pub" class="header__link">Pub</RouterLink>
     </nav>
   </header>
   <RouterView />
-  <!-- <RouterView v-slot="{ Component }">
-    <transition name="fade" mode="out-in">
-      <component :is="Component" :key="$route.path"></component>
-    </transition>
-  </RouterView> -->
 </template>
 
-<style>
+<style lang="scss">
 @import "@/assets/base.css";
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2rem;
   font-weight: normal;
   color: white;
 }
@@ -39,8 +31,18 @@ import HelloWorld from "@/components/HelloWorld.vue";
   gap: 10px;
   top: 0;
   height: 130px;
+  padding: 0 20px;
   background: var(--background);
   z-index: 1;
+  @media (min-width: 768px) {
+    padding: 0 30px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 50px;
+  }
+  @media (min-width: 1320px) {
+     padding: 0 calc((100vw - 1280px) / 2);
+  }
 }
 .header__logo {
   font-size: 2rem;
@@ -54,6 +56,29 @@ import HelloWorld from "@/components/HelloWorld.vue";
   grid-auto-columns: max-content;
   justify-content: flex-end;
   gap: 20px;
+}
+.header__link {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: color .2s ease-out;
+  &:hover, &:focus {
+    color: var(--palette-red);
+  }
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+}
+.section {
+  padding: 40px 20px;
+  @media (min-width: 768px) {
+    padding: 40px 30px;
+  }
+  @media (min-width: 1024px) {
+    padding: 50px 50px;
+  }
+  @media (min-width: 1320px) {
+     padding: 70px calc((100vw - 1280px) / 2);
+  }
 }
 
 /* #app {
