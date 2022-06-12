@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+const year = (new Date()).getFullYear();
 </script>
 
 <template>
@@ -15,6 +16,9 @@ import { RouterLink, RouterView } from "vue-router";
     </nav>
   </header>
   <RouterView />
+  <footer class="footer">
+    <small>&copy; {{ year }} Adam Douglas Wray. All rights reserved.</small>
+  </footer>
 </template>
 
 <style lang="scss">
@@ -132,5 +136,9 @@ import { RouterLink, RouterView } from "vue-router";
 .section__footer {
   margin-top: 30px;
 }
-
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: var(--palette-black);
+}
 </style>
