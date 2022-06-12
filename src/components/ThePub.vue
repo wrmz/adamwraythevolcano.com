@@ -9,7 +9,7 @@
                 <p class="section__subtitle">Established 2022</p>
             </header>
             <div class="section__body">
-                <a href="" target="_blank" title="Visit Man of the Earth Publishing's facebook page" class="link">
+                <a href="https://www.facebook.com/adam.wray.75" target="_blank" title="Visit Man of the Earth Publishing's facebook page" class="link">
                     <IconFacebook /> Man of the Earth Publishing Facebook Page
                 </a>
             </div>

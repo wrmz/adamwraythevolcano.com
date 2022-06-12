@@ -1,5 +1,6 @@
 <script setup>
-    import IconYouTube from './icons/IconYouTube.vue';
+    import IconYouTube from '@/components/icons/IconYouTube.vue';
+    import TheHowler from '@/components/TheHowler.vue';
 </script>
 <template>
     <section id="album" class="section" role="region" tabindex="0">
@@ -25,6 +26,7 @@
                 <a href="https://www.youtube.com/channel/UCuVmARb5T-sDJpBi8q9GIfg" target="_blank" class="link">
                     <IconYouTube /> The Adam Wray Sound
                 </a>
+                <TheHowler src="/sample.wav" />
             </div>
         </article>
     </section>
