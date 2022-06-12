@@ -26,8 +26,10 @@
                 <a href="https://www.youtube.com/channel/UCuVmARb5T-sDJpBi8q9GIfg" target="_blank" class="link">
                     <IconYouTube /> The Adam Wray Sound
                 </a>
-                <TheHowler src="/sample.wav" />
             </div>
+            <footer class="section__footer">
+                 <TheHowler src="/sample.wav" />
+            </footer>
         </article>
     </section>
 </template>
