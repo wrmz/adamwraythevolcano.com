@@ -17,9 +17,15 @@
   font-weight: normal;
 }
 html, body {
+  scroll-padding-top: 127px;
   scroll-behavior: smooth;
 }
 
+@media (min-width: 1024px) {
+  html, body {
+    scroll-padding-top: 130px;
+  }
+}
 body {
   min-height: 100vh;
   color: var(--color);

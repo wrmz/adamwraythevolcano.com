@@ -11,10 +11,18 @@ const router = createRouter({
     }
   ],
   scrollBehavior(to, from, savedPosition) {
-    return {
-      el: to.hash,
-      behavior: 'smooth',
-    };
+    if (to.hash) {
+      console.log('hash', to.hash);
+      const el = document.querySelector(to.hash);
+      if (el) {
+        console.log('el', el);
+        el.scrollIntoView({
+          inline: 'nearest',
+          block: 'start',
+          behavior: 'smooth'
+        });
+      }
+    }
   }
 });
 
