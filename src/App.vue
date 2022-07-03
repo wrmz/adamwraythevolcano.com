@@ -6,7 +6,7 @@ const year = (new Date()).getFullYear();
 <template>
   <header class="header">
     <h1 class="header__top">
-      <RouterLink to="/" class="header__logo">AdamWrayTheVolcano.com</RouterLink>
+      <RouterLink to="/" class="header__logo">AdamWrayTheVolcano<span>.com</span></RouterLink>
     </h1>
     <nav class="header__nav">
       <RouterLink to="#book" class="header__link">Book</RouterLink>
@@ -47,6 +47,9 @@ const year = (new Date()).getFullYear();
 }
 .header__logo {
   font-size: 2rem;
+  span {
+    opacity: 0.3;
+  }
 }
 .header__top {
   padding: 20px 0;

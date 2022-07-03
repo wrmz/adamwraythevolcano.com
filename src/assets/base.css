@@ -5,8 +5,40 @@
   --palette-black: #1C1916;
   --palette-dark-gray: #312928;
   --palette-red: #DE2002;
+  --font-heading: 'forgot', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+  Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-body: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+  Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+@font-face {
+  font-family: 'forgot';
+  src: url('./fonts/FORGOTTE.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'forgot';
+  src: url('./fonts/FORGOTTI.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'forgot';
+  src: url('./fonts/FORGOTTB.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'forgot';
+  src: url('./fonts/FORGOTTBI.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
 
 *,
 *::before,
@@ -29,8 +61,7 @@ html, body {
 body {
   min-height: 100vh;
   line-height: 1.6667;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   color: var(--color);
   text-rendering: optimizeLegibility;
@@ -57,4 +88,8 @@ a {
 .link:hover,
 .link:focus {
   color: var(--palette-red);
+}
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
 }
