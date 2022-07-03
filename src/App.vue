@@ -150,6 +150,9 @@ const year = (new Date()).getFullYear();
   }
 }
 .section__body {
+  padding: 20px;
+  background: var(--palette-dark-gray);
+  border-radius: 2px;
   @media (min-width: 1024px) {
     font-size: 18px;
   }
