@@ -108,8 +108,6 @@ const year = (new Date()).getFullYear();
   gap: 20px;
   @media (min-width: 768px) {
     gap: 30px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: max-content max-content;
   }
   @media (min-width: 1024px) {
     gap: 30px 50px;
@@ -120,6 +118,10 @@ const year = (new Date()).getFullYear();
 }
 .section {
   @media (min-width: 768px) {
+    .section__article {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: max-content max-content;
+    }
     .section__header {
       grid-row: 1;
       grid-column: 1 / span 2;
@@ -146,6 +148,14 @@ const year = (new Date()).getFullYear();
       .section__footer {
         grid-column: 1;
       }
+    }
+  }
+  @media (min-width: 1024px) {
+    .section__article {
+      grid-template-columns: minmax(0, 40%) minmax(0, 60%);
+    }
+    &:nth-child(odd) .section__article {
+      grid-template-columns: minmax(0, 60%) minmax(0, 40%);
     }
   }
 }
