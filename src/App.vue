@@ -161,9 +161,9 @@ const year = (new Date()).getFullYear();
 .section {
   padding: 40px 20px;
   &:nth-child(even) {
-    background: rgba(white, 0.1);
-    mix-blend-mode: overlay;
-
+    background: var(--palette-black) url('./assets/images/background.jpg') center no-repeat;
+    // mix-blend-mode: multiply;
+    background-blend-mode: screen;
   }
   &:nth-child(odd) {
     .figure,
