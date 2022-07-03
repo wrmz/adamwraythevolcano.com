@@ -7,10 +7,10 @@
 <template>
     <div class="socials">
         <div class="socials__title">More about me:</div>
-        <a href="https://adamdouglaswray.wixsite.com/artist" target="_blank" title="Check out my porfolio"><IconPortfolio /></a>
-        <a href="https://www.youtube.com/c/AdamWray" target="_blank" title="Check out my videos"><IconYouTube /></a>
-        <a href="https://www.facebook.com/adam.wray.75" target="_blank" title="Visit me on Facebook"><IconFacebook /></a>
-        <a href="https://www.instagram.com/adam.douglas.wray/" target="_blank" title="Follow me on Instagram"><IconInstagram /></a>
+        <a href="https://adamdouglaswray.wixsite.com/artist" target="_blank" title="Check out my porfolio"><IconPortfolio /> Portfolio</a>
+        <a href="https://www.youtube.com/c/AdamWray" target="_blank" title="Check out my videos"><IconYouTube /> Youtube</a>
+        <a href="https://www.facebook.com/adam.wray.75" target="_blank" title="Visit me on Facebook"><IconFacebook /> Facebook</a>
+        <a href="https://www.instagram.com/adam.douglas.wray/" target="_blank" title="Follow me on Instagram"><IconInstagram /> Instagram</a>
     </div>
 </template>
 <style lang="scss">
@@ -31,9 +31,15 @@
     text-transform: uppercase;
 }
 .socials a {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
+    justify-items: center;
+    gap: 5px;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     transition: color .2s ease-out;
     svg {
         width: 30px;
