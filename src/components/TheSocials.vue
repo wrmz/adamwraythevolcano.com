@@ -23,6 +23,7 @@
     gap: 20px;
     padding: 20px;
     background: var(--palette-dark-gray);
+    box-shadow: 0 0 20px var(--palette-black);
 }
 .socials__title {
     display: none;

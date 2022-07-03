@@ -171,6 +171,9 @@ const year = (new Date()).getFullYear();
     .callout {
       background: var(--palette-dark-gray);
     }
+    .section__body {
+       border-top: 10px solid var(--palette-black);
+    }
   }
   p {
     margin-bottom: 1em;
@@ -225,7 +228,9 @@ const year = (new Date()).getFullYear();
   grid-row: 3;
   padding: 20px;
   background: var(--palette-black);
+  border-top: 10px solid var(--palette-dark-gray);
   border-radius: 2px;
+  box-shadow: 0 0 20px var(--palette-black);
   @media (min-width: 768px) {
     padding: 30px;
   }
@@ -239,6 +244,7 @@ const year = (new Date()).getFullYear();
   gap: 10px;
   padding: 10px;
   background: var(--palette-black);
+  box-shadow: 0 0 20px var(--palette-black);
 }
 .picture, .picture img {
   display: block;

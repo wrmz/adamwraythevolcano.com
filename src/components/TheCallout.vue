@@ -17,5 +17,6 @@
         letter-spacing: 0.02em;
         color: var(--palette-red);
         background: var(--palette-black);
+        box-shadow: 0 0 20px var(--palette-black);
     }
 </style>
