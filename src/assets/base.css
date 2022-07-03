@@ -80,9 +80,11 @@ a {
 .link {
   display: grid;
   grid-auto-flow: column dense;
-  grid-auto-columns: max-content;
+  grid-auto-columns: auto;
   align-items: center;
+  justify-content: flex-start;
   gap: 10px;
+  line-height: 1.3;
   transition: color .2s ease-out;
 }
 .link:hover,

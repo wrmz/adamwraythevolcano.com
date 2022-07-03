@@ -82,7 +82,7 @@ const year = (new Date()).getFullYear();
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 8px 30px 10px 20px;
+  padding: 8px 30px 5px 20px;
   font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -200,6 +200,9 @@ const year = (new Date()).getFullYear();
   @media (min-width: 1024px) {
     font-size: 40px;
   }
+  @media (min-width: 1320px) {
+    font-size: 60px;
+  }
 }
 .section__subtitle {
   font-family: var(--font-heading);
@@ -212,10 +215,14 @@ const year = (new Date()).getFullYear();
 }
 .section__body {
   grid-row: 3;
-  padding: 50px;
+  padding: 20px;
   background: var(--palette-black);
   border-radius: 2px;
+  @media (min-width: 768px) {
+    padding: 30px;
+  }
   @media (min-width: 1024px) {
+    padding: 50px;
     font-size: 18px;
   }
 }
