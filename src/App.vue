@@ -243,6 +243,7 @@ const year = (new Date()).getFullYear();
   display: grid;
   gap: 10px;
   padding: 10px;
+  border-radius: 2px;
   background: var(--palette-black);
   box-shadow: 0 0 20px var(--palette-black);
 }

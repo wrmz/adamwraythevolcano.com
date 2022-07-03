@@ -22,6 +22,7 @@
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
+    border-radius: 2px;
     background: var(--palette-dark-gray);
     box-shadow: 0 0 20px var(--palette-black);
 }
