@@ -5,6 +5,7 @@ const year = (new Date()).getFullYear();
 
 <template>
   <header class="header">
+    <div class="header__background"></div>
     <h1 class="header__top">
       <RouterLink to="/" class="header__logo">AdamWrayTheVolcano<span>.com</span></RouterLink>
     </h1>
@@ -33,7 +34,8 @@ const year = (new Date()).getFullYear();
   display: grid;
   top: 0;
   padding: 0 20px;
-  background: var(--palette-dark-gray);
+  backdrop-filter: blur(3px);
+  // background: var(--palette-dark-gray);
   z-index: 1;
   @media (min-width: 768px) {
     padding: 0 30px;
@@ -44,6 +46,20 @@ const year = (new Date()).getFullYear();
   @media (min-width: 1320px) {
      padding: 0 calc((100vw - 1280px) / 2);
   }
+}
+.header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--palette-dark-gray) url('./assets/images/background.jpg') top center no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  opacity: 0.8;
+
 }
 .header__logo {
   font-size: 2rem;
@@ -150,8 +166,8 @@ const year = (new Date()).getFullYear();
   }
 }
 .section__body {
-  padding: 20px;
-  background: var(--palette-dark-gray);
+  padding: 30px;
+  background: var(--palette-black);
   border-radius: 2px;
   @media (min-width: 1024px) {
     font-size: 18px;

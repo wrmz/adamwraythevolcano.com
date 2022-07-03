@@ -67,7 +67,7 @@ body {
   text-rendering: optimizeLegibility;
   background: var(--background) url('./images/background.jpg') no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   transition: color 0.5s, background-color 0.5s;
   -webkit-font-smoothing: antialiased;
