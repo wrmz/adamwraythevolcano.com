@@ -25,10 +25,14 @@
     background: var(--palette-dark-gray);
 }
 .socials__title {
+    display: none;
     font-size: 16px;
     line-height: 1;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    @media (min-width: 1024px) {
+        display: block;
+    }
 }
 .socials a {
     display: grid;
