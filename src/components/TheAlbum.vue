@@ -16,6 +16,7 @@
                 <p class="section__subtitle">Alternative/Blues/Rock</p>
             </header>
             <div class="section__body">
+                <p>The sister project to The Volcano is coming soon to an ear near you. Lava Lava is a concept album, the concept of experiences and life&rsquo;s emotions building up like a volcano. When it erupts, creativity spews in all directions. In this case it comes in the form of&nbsp;radio&nbsp;waves.</p>
                 <a href="https://www.youtube.com/channel/UCuVmARb5T-sDJpBi8q9GIfg" target="_blank" class="link">
                     <IconYouTube /> The Adam Wray Sound
                 </a>
