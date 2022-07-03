@@ -3,6 +3,12 @@
 </script>
 <template>
     <section id="pub" class="section" role="region" tabindex="0">
+         <aside class="section__column">
+            <picture class="picture">
+                <source srcset="@/assets/images/motep_logo.webp" format="image/webp">
+                <img alt="" src="@/assets/images/motep_logo.jpg">
+            </picture>
+        </aside>
          <article class="section__column">
             <header class="section__header">
                 <h2 class="section__title">Man of the Earth Publishing, LLC</h2>
@@ -14,11 +20,5 @@
                 </a>
             </div>
         </article>
-        <aside class="section__column">
-            <picture class="picture">
-                <source srcset="@/assets/images/motep_logo.webp" format="image/webp">
-                <img alt="" src="@/assets/images/motep_logo.jpg">
-            </picture>
-        </aside>
     </section>
 </template>

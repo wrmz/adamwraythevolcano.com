@@ -1,10 +1,10 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --color: white;
-  --background: #011012;
-  --palette-black: #011012;
-  --palette-dark-gray: #1F3133;
-  --palette-red: red;
+  --background: #241E19;
+  --palette-black: #241E19;
+  --palette-dark-gray: #312928;
+  --palette-red: #DE2002;
 }
 
 

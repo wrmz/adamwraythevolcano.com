@@ -9,9 +9,9 @@ const year = (new Date()).getFullYear();
       <RouterLink to="/" class="header__logo">AdamWrayTheVolcano.com</RouterLink>
     </h1>
     <nav class="header__nav">
-      <RouterLink to="#bio" class="header__link">Bio</RouterLink>
       <RouterLink to="#book" class="header__link">Book</RouterLink>
       <RouterLink to="#album" class="header__link">Album</RouterLink>
+      <RouterLink to="#bio" class="header__link">Bio</RouterLink>
       <RouterLink to="#pub" class="header__link">Pub</RouterLink>
     </nav>
   </header>

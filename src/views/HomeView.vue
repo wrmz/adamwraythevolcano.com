@@ -7,9 +7,9 @@
 
 <template>
   <main>
-    <TheBio />
     <TheBook />
     <TheAlbum />
+    <TheBio />
     <ThePub />
   </main>
 </template>
