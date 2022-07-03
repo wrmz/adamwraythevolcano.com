@@ -4,6 +4,12 @@
 </script>
 <template>
     <section id="book" class="section" role="region" tabindex="0">
+         <aside class="section__column">
+            <picture class="picture">
+                <source srcset="@/assets/images/book_cover.webp" format="image/webp">
+                <img alt="" src="@/assets/images/book_cover.jpg">
+            </picture>
+        </aside>
         <article class="section__column">
             <header class="section__header">
                 <h2 class="section__title">The Volcano</h2>
@@ -29,12 +35,6 @@
                 </TheCallout>
             </footer>
         </article>
-        <aside class="section__column">
-            <picture class="picture">
-                <source srcset="@/assets/images/book_cover.webp" format="image/webp">
-                <img alt="" src="@/assets/images/book_cover.jpg">
-            </picture>
-        </aside>
     </section>
 </template>
 <style>

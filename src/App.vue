@@ -101,6 +101,17 @@ const year = (new Date()).getFullYear();
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px;
     padding: 40px 30px;
+    &:nth-child(odd) {
+      aside, article {
+        grid-row: 1;
+      }
+      aside {
+        grid-column: 2;
+      }
+      article {
+        grid-column: 1;
+      }
+    }
   }
   @media (min-width: 1024px) {
     gap: 50px;
