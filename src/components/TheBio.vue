@@ -17,10 +17,12 @@
                 <TheSocials />
             </footer>
             <aside class="section__aside">
-                <picture class="picture">
-                    <source srcset="@/assets/images/portrait.webp" format="image/webp">
-                    <img alt="" src="@/assets/images/portrait.jpg">
-                </picture>
+                <figure class="figure">
+                    <picture class="picture">
+                        <source srcset="@/assets/images/portrait.webp" format="image/webp">
+                        <img alt="" src="@/assets/images/portrait.jpg">
+                    </picture>
+                </figure>
             </aside>
         </article>
     </section>

@@ -19,10 +19,12 @@
                  <TheHowler src="/sample.wav" />
             </footer>
              <aside class="section__aside">
-                <picture class="picture">
-                    <source srcset="@/assets/images/album_cover.webp" format="image/webp">
-                    <img alt="" src="@/assets/images/album_cover.jpg">
-                </picture>
+                <figure class="figure">
+                    <picture class="picture">
+                        <source srcset="@/assets/images/album_cover.webp" format="image/webp">
+                        <img alt="" src="@/assets/images/album_cover.jpg">
+                    </picture>
+                </figure>
             </aside>
         </article>
     </section>

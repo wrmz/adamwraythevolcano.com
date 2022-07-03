@@ -14,10 +14,12 @@
                 </a>
             </div>
              <aside class="section__aside">
-                <picture class="picture">
-                    <source srcset="@/assets/images/motep_logo.webp" format="image/webp">
-                    <img alt="" src="@/assets/images/motep_logo.jpg">
-                </picture>
+                <figure class="figure">
+                    <picture class="picture">
+                        <source srcset="@/assets/images/motep_logo.webp" format="image/webp">
+                        <img alt="Man of the Earth Publishing" src="@/assets/images/motep_logo.jpg">
+                    </picture>
+                </figure>
             </aside>
         </article>
     </section>
