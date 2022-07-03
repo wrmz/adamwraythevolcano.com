@@ -166,7 +166,7 @@ const year = (new Date()).getFullYear();
   }
 }
 .section__body {
-  padding: 30px;
+  padding: 50px;
   background: var(--palette-black);
   border-radius: 2px;
   @media (min-width: 1024px) {
