@@ -5,17 +5,10 @@
 <template>
     <section id="album" class="section" role="region" tabindex="0">
         <aside class="section__column">
-            <div class="video">
-                <iframe
-                    id="ytplayer"
-                    type="text/html"
-                    width="720"
-                    height="405"
-                    src="https://www.youtube.com/embed/OoHw41eryn0?fs=0&modestbranding=1&playsinline=1"
-                    frameborder="0"
-                    allowfullscreen
-                ></iframe>
-            </div>
+            <picture class="picture">
+                <source srcset="@/assets/images/album_cover.webp" format="image/webp">
+                <img alt="" src="@/assets/images/album_cover.jpg">
+            </picture>
         </aside>
         <article class="section__column">
             <header class="section__header">
