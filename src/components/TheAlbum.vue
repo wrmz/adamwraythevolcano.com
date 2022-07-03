@@ -15,15 +15,15 @@
                     <IconYouTube /> The Adam Wray Sound
                 </a>
             </div>
-            <footer class="section__footer">
-                 <TheHowler src="/sample.wav" />
-            </footer>
              <aside class="section__aside">
                 <figure class="figure">
                     <picture class="picture">
                         <source srcset="@/assets/images/album_cover.webp" format="image/webp">
                         <img alt="" src="@/assets/images/album_cover.jpg">
                     </picture>
+                    <figcaption class="figcaption">
+                        <TheHowler src="/sample.wav" />
+                    </figcaption>
                 </figure>
             </aside>
         </article>
