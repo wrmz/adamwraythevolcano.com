@@ -3,13 +3,7 @@
 </script>
 <template>
     <section id="pub" class="section" role="region" tabindex="0">
-         <aside class="section__column">
-            <picture class="picture">
-                <source srcset="@/assets/images/motep_logo.webp" format="image/webp">
-                <img alt="" src="@/assets/images/motep_logo.jpg">
-            </picture>
-        </aside>
-         <article class="section__column">
+         <article class="section__article">
             <header class="section__header">
                 <h2 class="section__title">Man of the Earth Publishing LLC</h2>
                 <p class="section__subtitle">Established 2022</p>
@@ -19,6 +13,12 @@
                     <IconFacebook /> Man of the Earth Publishing Facebook Page
                 </a>
             </div>
+             <aside class="section__aside">
+                <picture class="picture">
+                    <source srcset="@/assets/images/motep_logo.webp" format="image/webp">
+                    <img alt="" src="@/assets/images/motep_logo.jpg">
+                </picture>
+            </aside>
         </article>
     </section>
 </template>

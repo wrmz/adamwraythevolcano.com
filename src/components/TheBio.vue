@@ -3,13 +3,7 @@
 </script>
 <template>
     <section id="bio" class="section" role="region" tabindex="0">
-        <aside class="section__column">
-            <picture class="picture">
-                <source srcset="@/assets/images/portrait.webp" format="image/webp">
-                <img alt="" src="@/assets/images/portrait.jpg">
-            </picture>
-        </aside>
-        <article class="section__column">
+        <article class="section__article">
             <header class="section__header">
                 <h2 class="section__title">Adam Wray</h2>
                 <p class="section__subtitle">Bio not BO</p>
@@ -22,10 +16,12 @@
             <footer class="section__footer">
                 <TheSocials />
             </footer>
+            <aside class="section__aside">
+                <picture class="picture">
+                    <source srcset="@/assets/images/portrait.webp" format="image/webp">
+                    <img alt="" src="@/assets/images/portrait.jpg">
+                </picture>
+            </aside>
         </article>
     </section>
 </template>
-
-<style scoped>
-
-</style>

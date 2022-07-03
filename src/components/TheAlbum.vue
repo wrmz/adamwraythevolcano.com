@@ -4,13 +4,7 @@
 </script>
 <template>
     <section id="album" class="section" role="region" tabindex="0">
-        <aside class="section__column">
-            <picture class="picture">
-                <source srcset="@/assets/images/album_cover.webp" format="image/webp">
-                <img alt="" src="@/assets/images/album_cover.jpg">
-            </picture>
-        </aside>
-        <article class="section__column">
+        <article class="section__article">
             <header class="section__header">
                 <h2 class="section__title">Lava Lava</h2>
                 <p class="section__subtitle">Alternative/Blues/Rock</p>
@@ -24,6 +18,12 @@
             <footer class="section__footer">
                  <TheHowler src="/sample.wav" />
             </footer>
+             <aside class="section__aside">
+                <picture class="picture">
+                    <source srcset="@/assets/images/album_cover.webp" format="image/webp">
+                    <img alt="" src="@/assets/images/album_cover.jpg">
+                </picture>
+            </aside>
         </article>
     </section>
 </template>

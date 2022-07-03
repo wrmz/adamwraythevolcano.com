@@ -4,13 +4,7 @@
 </script>
 <template>
     <section id="book" class="section" role="region" tabindex="0">
-         <aside class="section__column">
-            <picture class="picture">
-                <source srcset="@/assets/images/book_cover.webp" format="image/webp">
-                <img alt="" src="@/assets/images/book_cover.jpg">
-            </picture>
-        </aside>
-        <article class="section__column">
+        <article class="section__article">
             <header class="section__header">
                 <h2 class="section__title">The Volcano</h2>
                 <p class="section__subtitle">My Life &mdash; Proof of God&rsquo;s Existence?</p>
@@ -32,6 +26,12 @@
                     </template>
                 </TheCallout>
             </footer>
+            <aside class="section__aside">
+                <picture class="picture">
+                    <source srcset="@/assets/images/book_cover.webp" format="image/webp">
+                    <img alt="" src="@/assets/images/book_cover.jpg">
+                </picture>
+            </aside>
         </article>
     </section>
 </template>
