@@ -11,7 +11,7 @@
         </aside>
          <article class="section__column">
             <header class="section__header">
-                <h2 class="section__title">Man of the Earth Publishing, LLC</h2>
+                <h2 class="section__title">Man of the Earth Publishing LLC</h2>
                 <p class="section__subtitle">Established 2022</p>
             </header>
             <div class="section__body">
