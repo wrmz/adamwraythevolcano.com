@@ -37,9 +37,10 @@
 </template>
 <style>
     .section__leadin {
+        font-family: var(--font-heading);
         font-size: 30px;
         text-transform: uppercase;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.05em;
         color: var(--palette-red);
     }
 </style>

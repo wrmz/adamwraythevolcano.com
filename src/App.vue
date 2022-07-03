@@ -69,6 +69,9 @@ const year = (new Date()).getFullYear();
   justify-content: center;
   position: relative;
   padding: 8px 30px 10px 20px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.05em;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -129,6 +132,8 @@ const year = (new Date()).getFullYear();
   margin-bottom: 30px;
 }
 .section__title {
+  font-family: var(--font-heading);
+  font-weight: 600;
   font-size: 30px;
   line-height: 1.3;
   @media (min-width: 1024px) {
@@ -136,6 +141,8 @@ const year = (new Date()).getFullYear();
   }
 }
 .section__subtitle {
+   font-family: var(--font-heading);
+  font-weight: 400;
   font-size: 24px;
   line-height: 1.3;
   @media (min-width: 1024px) {
@@ -149,6 +156,12 @@ const year = (new Date()).getFullYear();
 }
 .section__footer {
   margin-top: 30px;
+}
+.picture {
+  display: block;
+  overflow: hidden;
+  border-radius: 2px;
+
 }
 .footer {
   padding: 30px;

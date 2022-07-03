@@ -89,11 +89,7 @@ a {
 .link:focus {
   color: var(--palette-red);
 }
-h1, h2, h3, .section__title {
+h1 {
   font-family: var(--font-heading);
   font-weight: 600;
-}
-.section__subtitle {
-  font-family: var(--font-heading);
-  font-weight: 400;
 }
