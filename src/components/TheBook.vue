@@ -29,8 +29,8 @@
             <aside class="section__aside">
                 <figure class="figure">
                     <picture class="picture">
-                        <source srcset="@/assets/images/book_cover.webp" format="image/webp">
-                        <img alt="Book Cover, featuring a male and female dancing around a volcanic pool" src="@/assets/images/book_cover.jpg">
+                        <source srcset="@/assets/images/book_cover_v2.webp" format="image/webp">
+                        <img alt="Book Cover, featuring a male and female dancing around a volcanic pool" src="@/assets/images/book_cover_v2.jpg">
                     </picture>
                     <figcaption class="figcaption">
                         Coming <a href="https://calendar.google.com/calendar/r/eventedit?text=The+Volcano+Available+for+Preorder&dates=20220922T160000Z/20220922T180000Z&details=For+details,+visit:+https://adamwraythevolcano.com" target="_blank" class="link" style="display:inline-grid">9/22/22</a>
