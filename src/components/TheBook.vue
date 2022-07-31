@@ -29,7 +29,7 @@
             </footer>
             <aside class="section__aside">
                 <figure class="figure">
-                    <TheFlamePhoto src="/assets/book_cover_v2.jpg"></TheFlamePhoto>
+                    <TheFlamePhoto src="/book_cover_v2.jpg"></TheFlamePhoto>
                     <!-- <picture class="picture">
                         <source srcset="@/assets/images/book_cover_v2.webp" format="image/webp">
                         <img alt="Book Cover, featuring a male and female dancing around a volcanic pool" src="@/assets/images/book_cover_v2.jpg">
