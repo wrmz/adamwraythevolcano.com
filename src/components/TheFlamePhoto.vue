@@ -39,16 +39,16 @@ export default {
         },
         isOnFire: false,
         flames: [],
-        ctx: {},
+        ctx: undefined,
         canvasW: 0,
         canvasH: 0,
         resizeObserver: undefined,
         animationFrame: undefined
     }),
     computed: {
-        flamephotoElem() { return this.$refs.flamephotoElem; },
-        img() { return this.$refs.img; },
-        canvas() { return this.$refs.canvas; },
+        flamephotoElem() { return this.$refs.flamephotoElem || null; },
+        img() { return this.$refs.img || null; },
+        canvas() { return this.$refs.canvas || null; },
         dimW() { return Math.ceil(this.canvasW / this.settings.size); },
         dimH() { return Math.ceil(this.canvasH / this.settings.size); }
     },
@@ -63,7 +63,9 @@ export default {
     },
     mounted() {
         this.resizeObserver = new ResizeObserver(this.handleResize);
-        this.$nextTick(this.watchElems);
+        if (this.$refs.canvas) {
+            this.$nextTick(this.watchElems);
+        }
     },
     beforeUnmount() {
         this.resizeObserver.disconnect();
@@ -83,6 +85,9 @@ export default {
         burnIt() {
             this.isOnFire = !this.isOnFire;
             if (this.isOnFire) {
+                if (!this.ctx) {
+                    this.watchElems();
+                }
                 this.generateFlames();
             }
         },
