@@ -2,7 +2,7 @@
     import IconFire from './icons/IconFire.vue';
 </script>
 <template>
-    <div class="flamephoto" ref="el">
+    <div class="flamephoto" ref="flamephotoElem">
         <img alt="" :src="src" class="flamephoto__img" ref="img" />
         <canvas class="flamephoto__canvas" ref="canvas"></canvas>
     </div>
@@ -46,7 +46,7 @@ export default {
         animationFrame: undefined
     }),
     computed: {
-        el() { return this.$refs.el; },
+        flamephotoElem() { return this.$refs.flamephotoElem; },
         img() { return this.$refs.img; },
         canvas() { return this.$refs.canvas; },
         dimW() { return Math.ceil(this.canvasW / this.settings.size); },
@@ -63,7 +63,6 @@ export default {
     },
     mounted() {
         this.resizeObserver = new ResizeObserver(this.handleResize);
-        this.ctx = this.canvas.getContext('2d');
         this.$nextTick(this.watchElems);
     },
     beforeUnmount() {
@@ -72,9 +71,10 @@ export default {
     },
     methods: {
         watchElems() {
-            this.canvasW = this.el.getBoundingClientRect().width;
-            this.canvasH = this.el.getBoundingClientRect().height;
-            this.resizeObserver.observe(this.el);
+            this.ctx = this.canvas.getContext('2d');
+            this.canvasW = this.flamephotoElem.getBoundingClientRect().width;
+            this.canvasH = this.flamephotoElem.getBoundingClientRect().height;
+            this.resizeObserver.observe(this.flamephotoElem);
         },
         clear() {
             this.flames = [];
