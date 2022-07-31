@@ -2,23 +2,25 @@
     import IconFire from './icons/IconFire.vue';
 </script>
 <template>
-    <div class="flamephoto" ref="flamephotoElem">
-        <img alt="" :src="src" class="flamephoto__img" ref="img" />
-        <canvas class="flamephoto__canvas" ref="canvas"></canvas>
-    </div>
-    <div class="flamephoto__actions">
-        <button
-            type="button"
-            class="flamephoto__button"
-            @click="burnIt"
-        >
-                <div class="flamephoto__button-icon">
-                    <IconFire></IconFire>
-                </div>
-                <div class="flamephoto__button-content">
-                    {{ isOnFire ? 'OK. Stop It.' : 'Burn This Book' }}
-                </div>
-        </button>
+    <div>
+        <div class="flamephoto" ref="flamephotoElem">
+            <img alt="" :src="src" class="flamephoto__img" ref="img" />
+            <canvas class="flamephoto__canvas" ref="canvas"></canvas>
+        </div>
+        <div class="flamephoto__actions">
+            <button
+                type="button"
+                class="flamephoto__button"
+                @click="burnIt"
+            >
+                    <div class="flamephoto__button-icon">
+                        <IconFire></IconFire>
+                    </div>
+                    <div class="flamephoto__button-content">
+                        {{ isOnFire ? 'OK. Stop It.' : 'Burn This Book' }}
+                    </div>
+            </button>
+        </div>
     </div>
 </template>
 <script>
