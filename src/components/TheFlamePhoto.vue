@@ -3,9 +3,9 @@
 </script>
 <template>
     <div>
-        <div class="flamephoto" ref="flamephotoElem">
-            <img alt="" :src="src" class="flamephoto__img" ref="img" />
-            <canvas class="flamephoto__canvas" ref="canvas"></canvas>
+        <div class="flamephoto">
+            <img alt="" :src="src" class="flamephoto__img" />
+            <canvas class="flamephoto__canvas"></canvas>
         </div>
         <div class="flamephoto__actions">
             <button
@@ -39,6 +39,9 @@ export default {
             outerFlameStartColor: { r: 200, g: 60, b: 0 },
             outerFlameEndColor: { r: 80, g: 10, b: 0 }
         },
+        el: undefined,
+        img: undefined,
+        canvas: undefined,
         isOnFire: false,
         flames: [],
         ctx: undefined,
@@ -48,9 +51,6 @@ export default {
         animationFrame: undefined
     }),
     computed: {
-        flamephotoElem() { return this.$refs.flamephotoElem || null; },
-        img() { return this.$refs.img || null; },
-        canvas() { return this.$refs.canvas || null; },
         dimW() { return Math.ceil(this.canvasW / this.settings.size); },
         dimH() { return Math.ceil(this.canvasH / this.settings.size); }
     },
@@ -65,9 +65,7 @@ export default {
     },
     mounted() {
         this.resizeObserver = new ResizeObserver(this.handleResize);
-        if (this.$refs.canvas) {
-            this.$nextTick(this.watchElems);
-        }
+        this.$nextTick(this.watchElems);
     },
     beforeUnmount() {
         this.resizeObserver.disconnect();
@@ -75,10 +73,13 @@ export default {
     },
     methods: {
         watchElems() {
+            this.el = document.querySelector('.flamephoto');
+            this.img = document.querySelector('.flamephoto__img');
+            this.canvas = document.querySelector('.flamephoto__canvas');
             this.ctx = this.canvas.getContext('2d');
-            this.canvasW = this.flamephotoElem.getBoundingClientRect().width;
-            this.canvasH = this.flamephotoElem.getBoundingClientRect().height;
-            this.resizeObserver.observe(this.flamephotoElem);
+            this.canvasW = this.el.getBoundingClientRect().width;
+            this.canvasH = this.el.getBoundingClientRect().height;
+            this.resizeObserver.observe(this.el);
         },
         clear() {
             this.flames = [];
@@ -230,7 +231,7 @@ export default {
     grid-template-columns: max-content max-content;
     align-items: center;
     gap: 10px;
-    margin: 0 auto;
+    margin: 20px auto 0;
     padding: 10px 20px;
     font-size: 18px;
     text-transform: uppercase;
