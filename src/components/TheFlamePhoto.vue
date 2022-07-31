@@ -64,16 +64,18 @@ export default {
     mounted() {
         this.resizeObserver = new ResizeObserver(this.handleResize);
         this.ctx = this.canvas.getContext('2d');
-        this.canvasW = this.el.getBoundingClientRect().width;
-        this.canvasH = this.el.getBoundingClientRect().height;
-
-        this.resizeObserver.observe(this.el);
+        this.$nextTick(this.watchElems);
     },
     beforeUnmount() {
         this.resizeObserver.disconnect();
         cancelAnimationFrame(this.animationFrame);
     },
     methods: {
+        watchElems() {
+            this.canvasW = this.el.getBoundingClientRect().width;
+            this.canvasH = this.el.getBoundingClientRect().height;
+            this.resizeObserver.observe(this.el);
+        },
         clear() {
             this.flames = [];
             this.ctx.drawImage(this.img, 0, 0, this.canvasW, this.canvasH);
