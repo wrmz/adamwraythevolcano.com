@@ -1,7 +1,10 @@
 <script setup>
     import IconFacebook from '@/components/icons/IconFacebook.vue';
+    import IconEbook from '@/components/icons/IconEbook.vue';
+    import IconHardcover from '@/components/icons/IconHardcover.vue';
+    import IconPaperback from '@/components/icons/IconPaperback.vue';
+    import IconFire from '@/components/icons/IconFire.vue';
     import TheCallout from '@/components/TheCallout.vue';
-    // import TheFlamePhoto from './TheFlamePhoto.vue';
 </script>
 <template>
     <section id="book" class="section" role="region" tabindex="0">
@@ -18,8 +21,30 @@
                 <p><i>The Volcano</i> serves as a reminder to us all that regardless of our differences, we are intrisically similar in how we&rsquo;re affected by our upbringing, our relationships, and our experiences. We stop short in attempting to diagnose Ray&rsquo;s afflictions, realizing we&rsquo;re attempting, actually, to diagnose our own. In the fullness of time, there are volcanoes in&nbsp;us&nbsp;all.</p>
             </div>
             <footer class="section__footer">
-                <TheCallout>
-                    Available for Preorder in September
+                <TheCallout class="book__callout">
+                    <div class="book__callout-content">
+                        Preorder the Book Today
+                    </div>
+                    <div class="book_callout-shopping">
+                        <!-- <button type="button" class="btn">
+                            <IconFire />
+                            Burn This Book
+                        </button> -->
+                        <a href="https://shop.aer.io/adamwraythevolcano/p/The_Volcano/9798986377728-13657" target="_blank" class="btn" title="Preorder The Volcano in E-book format">
+                            <IconEbook />
+                            E-Book
+                        </a>
+                        <div class="btn btn--disabled">
+                            <IconPaperback />
+                            Paperback
+                            <div class="btn__note">Coming Soon!</div>
+                        </div>
+                        <div class="btn btn--disabled">
+                            <IconHardcover />
+                            Hardcover
+                            <div class="btn__note">Coming Soon!</div>
+                        </div>
+                    </div>
                      <template #link>
                         <a href="https://www.facebook.com/Adam-Wray-The-Volcano-105492948856462" target="_blank" class="link">
                             <IconFacebook /> Adam Wray The Volcano
@@ -49,5 +74,22 @@
         text-transform: uppercase;
         letter-spacing: 0.05em;
         color: var(--palette-red);
+    }
+    .book__callout {
+        display: grid;
+        gap: 30px;
+    }
+    .book_callout-shopping {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 20px;
+    }
+    @media screen and (min-width: 768px) {
+        #book .section__footer {
+            grid-column: 1 / span 2;
+        }
+        .book_callout-shopping {
+            grid-template-columns: repeat(4, max-content);
+        }
     }
 </style>

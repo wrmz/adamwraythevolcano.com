@@ -1,9 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import TheBanner from '@/components/TheBanner.vue'
 const year = (new Date()).getFullYear();
 </script>
 
 <template>
+  <TheBanner></TheBanner>
   <header class="header">
     <div class="header__background"></div>
     <h1 class="header__top">
@@ -35,7 +37,7 @@ const year = (new Date()).getFullYear();
   top: 0;
   padding: 0 20px;
   backdrop-filter: blur(8px);
-  z-index: 1;
+  z-index: 2;
   @media (min-width: 768px) {
     padding: 0 30px;
   }
