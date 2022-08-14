@@ -14,7 +14,6 @@
                 <p class="section__subtitle">My Life &mdash; Proof of God&rsquo;s Existence?</p>
             </header>
             <div class="section__body">
-                <p class="section__leadin">Burn This Book</p>
                 <p>Human eyes are unprepared for the words describing the events which took place in this man&rsquo;s life.</p>
                 <p>Give heed to how Ray Adams (Adam Wray) conquered childhood depression after surviving an early suicide attempt. An unimaginable discovery firmly convinces him of God&rsquo;s presence. As we traverse the years together with Ray, we see his conviction challenged, and then strengthened. Vivid recollections are melded with inspiring moments of faith, heart-wrenching emotion, unapologetically unique blends of humor, and brutal honesty. Stories, theories, romance, and poems surface as he delineates the process leading him to eminence and sheer joy.</p>
                 <p>This autobiography takes a twist, as the author invites us on a journey that forms his life&rsquo;s volcano, through his own eyes, in real time. Is the introduction of a special and rare love the final puzzle piece in this man&rsquo;s pathway to God or will a &ldquo;volcanic eruption&rdquo; render him derailed?</p>
@@ -22,32 +21,6 @@
             </div>
             <footer class="section__footer">
                 <TheCallout class="book__callout">
-                    <div class="book__callout-content">
-                        Preorder the Book Today
-                    </div>
-                    <div class="book_callout-shopping">
-                        <button type="button" class="btn btn--tooltip" :class="{'btn--burning': isBurning}" aria-describedby="burnTooltip" @click="burnThisBook">
-                            <IconFire />
-                            Burn This Book
-                            <div id="burnTooltip" role="tooltip" :aria-hidden="isBurning" class="tooltip">
-                                Ouch!
-                            </div>
-                        </button>
-                        <a href="https://shop.aer.io/adamwraythevolcano/p/The_Volcano/9798986377728-13657" target="_blank" class="btn" title="Preorder The Volcano in E-book format">
-                            <IconEbook />
-                            E-Book
-                        </a>
-                        <div class="btn btn--disabled">
-                            <IconPaperback />
-                            Paperback
-                            <div class="btn__note">Coming Soon!</div>
-                        </div>
-                        <div class="btn btn--disabled">
-                            <IconHardcover />
-                            Hardcover
-                            <div class="btn__note">Coming Soon!</div>
-                        </div>
-                    </div>
                      <template #link>
                         <a href="https://www.facebook.com/Adam-Wray-The-Volcano-105492948856462" target="_blank" class="link">
                             <IconFacebook /> Adam Wray The Volcano
@@ -63,7 +36,20 @@
                         <img alt="Book Cover, featuring a male and female dancing around a volcanic pool" src="@/assets/images/book_cover_v2.jpg">
                     </picture>
                     <figcaption class="figcaption">
-                        Coming <a href="https://calendar.google.com/calendar/r/eventedit?text=The+Volcano+Available+for+Preorder&dates=20220922T160000Z/20220922T180000Z&details=For+details,+visit:+https://adamwraythevolcano.com" target="_blank" class="link" style="display:inline-grid">9/22/22</a>
+                        <span class="figcaption__copy">
+                            Coming <a href="https://calendar.google.com/calendar/r/eventedit?text=The+Volcano+Available+for+Preorder&dates=20220922T160000Z/20220922T180000Z&details=For+details,+visit:+https://adamwraythevolcano.com" target="_blank" class="link" style="display:inline-grid">9/22/22</a>
+                        </span>
+                        <button type="button" class="btn btn--tooltip" :class="{'btn--burning': isBurning}" aria-describedby="burnTooltip" @click="burnThisBook">
+                            <IconFire />
+                            Burn This Book
+                            <div id="burnTooltip" role="tooltip" :aria-hidden="isBurning" class="tooltip">
+                                Ouch!
+                            </div>
+                        </button>
+                        <a href="https://shop.aer.io/adamwraythevolcano" target="_blank" class="btn" title="Preorder The Volcano in E-book format">
+                            <IconHardcover />
+                            Buy This Book
+                        </a>
                     </figcaption>
                 </figure>
             </aside>
@@ -107,7 +93,6 @@ export default {
     }
     .book_callout-shopping {
         display: grid;
-        /* grid-template-columns: repeat(2, max-content); */
         gap: 20px;
     }
     .tooltip {
@@ -143,12 +128,12 @@ export default {
     .btn--burning .tooltip::after {
         transform: translateY(0) translateX(-50%);
     }
-    @media screen and (min-width: 768px) {
-        #book .section__footer {
-            grid-column: 1 / span 2;
-        }
-        .book_callout-shopping {
-            grid-template-columns: repeat(4, max-content);
-        }
+    #book .figcaption {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+    #book .figcaption__copy {
+        grid-column: 1 / span 2;
     }
 </style>
