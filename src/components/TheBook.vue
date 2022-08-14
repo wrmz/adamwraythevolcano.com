@@ -26,10 +26,13 @@
                         Preorder the Book Today
                     </div>
                     <div class="book_callout-shopping">
-                        <!-- <button type="button" class="btn">
+                        <button type="button" class="btn btn--tooltip" :class="{'btn--burning': isBurning}" aria-describedby="burnTooltip" @click="burnThisBook">
                             <IconFire />
                             Burn This Book
-                        </button> -->
+                            <div id="burnTooltip" role="tooltip" :aria-hidden="isBurning" class="tooltip">
+                                Ouch!
+                            </div>
+                        </button>
                         <a href="https://shop.aer.io/adamwraythevolcano/p/The_Volcano/9798986377728-13657" target="_blank" class="btn" title="Preorder The Volcano in E-book format">
                             <IconEbook />
                             E-Book
@@ -67,6 +70,29 @@
         </article>
     </section>
 </template>
+<script>
+export default {
+    name: 'TheBook',
+    data: () => ({
+        isBurning: false,
+        burningTimeout: undefined,
+    }),
+    methods: {
+        stopTheBurn() {
+            clearTimeout(this.burningTimeout);
+            this.isBurning = false;
+        },
+        burnThisBook() {
+            if (this.burningTimeout) {
+                clearTimeout(this.burningTimeout);
+                this.isBurning = false;
+            }
+            this.isBurning = true;
+            setTimeout(this.stopTheBurn, 3000);
+        }
+    }
+};
+</script>
 <style>
     .section__leadin {
         font-family: var(--font-heading);
@@ -83,6 +109,39 @@
         display: grid;
         grid-template-columns: repeat(2, max-content);
         gap: 20px;
+    }
+    .tooltip {
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 20px);
+        padding: 10px 30px;
+        font-size: 30px;
+        border-radius: 10px;
+        color: white;
+        background: var(--palette-red);
+        opacity: 0;
+        transform: translateY(50%) translateX(-50%);
+        transition: opacity .2s ease-out, transform .2s ease-out;
+    }
+    .tooltip::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-top: 15px solid var(--palette-red);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: translateY(-100%) translateX(-50%);
+        transition: transform .2s ease-out;
+    }
+    .btn--burning .tooltip {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+    .btn--burning .tooltip::after {
+        transform: translateY(0) translateX(-50%);
     }
     @media screen and (min-width: 768px) {
         #book .section__footer {

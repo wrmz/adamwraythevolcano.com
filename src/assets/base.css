@@ -106,7 +106,7 @@ h1 {
   font-weight: 600;
   text-transform: uppercase;
   color: var(--palette-dark-gray);
-  overflow: hidden;
+  /* overflow: hidden; */
   border: 0;
   border-radius: 2px;
   background: var(--color);
