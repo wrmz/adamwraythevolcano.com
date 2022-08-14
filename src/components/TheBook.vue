@@ -107,7 +107,7 @@ export default {
     }
     .book_callout-shopping {
         display: grid;
-        grid-template-columns: repeat(2, max-content);
+        /* grid-template-columns: repeat(2, max-content); */
         gap: 20px;
     }
     .tooltip {
