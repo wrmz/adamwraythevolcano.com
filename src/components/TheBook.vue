@@ -37,7 +37,7 @@
                     </picture>
                     <figcaption class="figcaption">
                         <span class="figcaption__copy">
-                            Coming <a href="https://calendar.google.com/calendar/r/eventedit?text=The+Volcano+Available+for+Preorder&dates=20220922T160000Z/20220922T180000Z&details=For+details,+visit:+https://adamwraythevolcano.com" target="_blank" class="link" style="display:inline-grid">9/22/22</a>
+                            Hard case, paperback, and ebook coming <a href="https://calendar.google.com/calendar/r/eventedit?text=The+Volcano+Available+for+Preorder&dates=20220922T160000Z/20220922T180000Z&details=For+details,+visit:+https://adamwraythevolcano.com" target="_blank" class="link" style="display:inline-grid">9/22/22</a>
                         </span>
                         <button type="button" class="btn btn--tooltip" :class="{'btn--burning': isBurning}" aria-describedby="burnTooltip" @click="burnThisBook">
                             <IconFire />
