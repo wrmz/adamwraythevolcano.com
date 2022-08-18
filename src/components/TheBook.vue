@@ -46,7 +46,7 @@
                                 Ouch!
                             </div>
                         </button>
-                        <a href="https://shop.aer.io/adamwraythevolcano" target="_blank" class="btn" title="Preorder The Volcano in E-book format">
+                        <a href="https://shop.aer.io/adamwraythevolcano" target="_blank" class="btn" title="Preorder The Volcano">
                             <IconHardcover />
                             Buy This Book
                         </a>

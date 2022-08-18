@@ -3,7 +3,7 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
 </script>
 <template>
     <div class="banner">
-        <div class="banner__content">E-Book Preorders Are Now Available!</div>
+        <div class="banner__content">Preorders Are Now Available!</div>
         <div class="banner__actions">
             <RouterLink to="#book" class="banner__link">Learn More</RouterLink>
             <a href="https://shop.aer.io/adamwraythevolcano" target="_blank" class="banner__link">Preorder Now</a>
