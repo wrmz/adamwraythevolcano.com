@@ -1,11 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import TheBanner from '@/components/TheBanner.vue'
+// import TheBanner from '@/components/TheBanner.vue'
 const year = (new Date()).getFullYear();
 </script>
 
 <template>
-  <TheBanner></TheBanner>
+  <!-- <TheBanner></TheBanner> -->
   <header class="header">
     <div class="header__background"></div>
     <h1 class="header__top">
