@@ -37,7 +37,7 @@
                     </picture>
                     <figcaption class="figcaption">
                         <span class="figcaption__copy">
-                            Hard case, paperback, and ebook coming <a href="https://calendar.google.com/calendar/r/eventedit?text=The+Volcano+Available+for+Preorder&dates=20220922T160000Z/20220922T180000Z&details=For+details,+visit:+https://adamwraythevolcano.com" target="_blank" class="link" style="display:inline-grid">9/22/22</a>
+                            Hard case, paperback, and ebook now available.
                         </span>
                         <button type="button" class="btn btn--tooltip" :class="{'btn--burning': isBurning}" aria-describedby="burnTooltip" @click="burnThisBook">
                             <IconFire />
@@ -46,7 +46,7 @@
                                 Ouch!
                             </div>
                         </button>
-                        <a href="https://shop.aer.io/adamwraythevolcano" target="_blank" class="btn" title="Preorder The Volcano">
+                        <a href="https://www.amazon.com/dp/B0BGHLVCCB?ref_=cm_sw_p_kb_dp&tag=mobile0fac656-20&linkCode=kpe" target="_blank" class="btn" title="Buy The Volcano">
                             <IconHardcover />
                             Buy This Book
                         </a>
